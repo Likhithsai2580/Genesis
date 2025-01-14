@@ -136,6 +136,10 @@ class Visualizer(RBC):
             else:
                 gs.raise_exception("Viewer closed.")
 
+        # Update camera to follow entity if enabled
+        for camera in self._cameras:
+            camera.follow_entity()
+
     def update_visual_states(self):
         """
         Update all visualization-only variables here.
