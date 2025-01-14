@@ -784,7 +784,7 @@ class RasterizerContext:
             [
                 (seg_idxc >> 16) & 0xFF,
                 (seg_idxc >> 8) & 0xFF,
-                seg_idxc & 0xFF,
+                (seg_idxc & 0xFF),
             ]
         )
         return seg_idxc_rgb
